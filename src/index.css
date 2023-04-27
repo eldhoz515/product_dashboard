@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Raleway:wght@400&display=swap');
+
+input,
+textarea,
+button,
+select,
+div,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components{
+    .nav{
+        @apply w-1/2 text-center pb-2 rounded-b-full font-poppins font-semibold text-lg
+    }
+    .attr{
+        @apply px-3 py-1 bg-gray-200 rounded-2xl text-slate-500 font-raleway text-sm
+    }
+    .input{
+        @apply outline-1 outline-slate-500 focus:outline-black pl-3 outline w-24 rounded-xl font-poppins
+    }
+    .editAttr{
+        @apply px-3 py-1 bg-gray-200 rounded-2xl text-slate-500 font-raleway text-sm
+    }
 }
